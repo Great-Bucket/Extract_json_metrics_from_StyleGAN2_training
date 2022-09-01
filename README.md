@@ -1,2 +1,4 @@
 # Extract_json_metrics_from_StyleGAN2_training
-Crawls thru a directory (and subdirectory) to find the metrics JSON file. Parses that, and writes the requested fields to a text-file.
+This python script crawls thru a directory (and subdirectory) to find the metrics JSON file created by StyleGAN2 ADA (pytorch). Parses that, and writes the requested fields to a text-file.
+
+When training a StyleGAN2ada (pytorch), you can use this script to extract the fid50k_full json metric along with the timestamp and then write those into a text file that you can use for analytics. In particular, this script is written to locate the metric-fid50k_full.jsonl files within a set of directories (or sub-directories) and then extract from each of those files, the fid50k_full measure and the timestamp.  The data is written into a 'pipe' delimited text file that can be parsed by many apps including MS Excel -- from which you can create graphs, trend lines, etc to evaluate your training.
